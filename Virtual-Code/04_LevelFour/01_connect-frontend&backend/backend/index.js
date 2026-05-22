@@ -1,27 +1,16 @@
-import express from "express";
-import cors from "cors";
+const express = require("express");
+const cors = require("cors");
 
-const app = express();
 const port = 3000;
+const app = express();
 
-app.use(express.json());
-
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-  }),
-);
+// allow cross-origin
+app.use(cors());
 
 app.get("/", (req, res) => {
-  res.json({ name: "ankit", address: "gudgaon", age: 25 });
-});
-
-app.post("/", (req, res) => {
-  console.log(req.body);
-
-  res.send({ success: true });
+  res.json({ name: "ankit", age: 26, address: "new-delhi" });
 });
 
 app.listen(port, () => {
-  console.log(`server running at ${port} ...`);
+  console.log(`server running at ${port} ..`);
 });

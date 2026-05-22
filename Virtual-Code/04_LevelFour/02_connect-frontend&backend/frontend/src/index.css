@@ -1,0 +1,27 @@
+body {
+  height: 100vh;
+  background-color: #16171d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-size: 30px;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+input {
+  padding: 10px;
+  font-size: 25px;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
